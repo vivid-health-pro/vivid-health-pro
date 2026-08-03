@@ -1,0 +1,2171 @@
+{
+ "Parameters": {
+  "DynamoDBModelTableReadIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of read IOPS the table should support."
+  },
+  "DynamoDBModelTableWriteIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of write IOPS the table should support."
+  },
+  "DynamoDBBillingMode": {
+   "Type": "String",
+   "Default": "PAY_PER_REQUEST",
+   "AllowedValues": [
+    "PAY_PER_REQUEST",
+    "PROVISIONED"
+   ],
+   "Description": "Configure @model types to create DynamoDB tables with PAY_PER_REQUEST or PROVISIONED billing modes."
+  },
+  "DynamoDBEnablePointInTimeRecovery": {
+   "Type": "String",
+   "Default": "false",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Whether to enable Point in Time Recovery on the table."
+  },
+  "DynamoDBEnableServerSideEncryption": {
+   "Type": "String",
+   "Default": "true",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Enable server side encryption powered by KMS."
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": {
+   "Type": "String"
+  }
+ },
+ "Conditions": {
+  "HasEnvironmentParameter": {
+   "Fn::Not": [
+    {
+     "Fn::Equals": [
+      "NONE",
+      "NONE"
+     ]
+    }
+   ]
+  },
+  "ShouldUsePayPerRequestBilling": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBBillingMode"
+    },
+    "PAY_PER_REQUEST"
+   ]
+  },
+  "ShouldUsePointInTimeRecovery": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnablePointInTimeRecovery"
+    },
+    "true"
+   ]
+  },
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-3"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-4"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-2"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "us-west-2"
+     ]
+    }
+   ]
+  }
+ },
+ "Resources": {
+  "DailyLogTable": {
+   "Type": "Custom::AmplifyDynamoDBTable",
+   "Properties": {
+    "ServiceToken": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251"
+    },
+    "tableName": {
+     "Fn::Join": [
+      "",
+      [
+       "DailyLog-",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "attributeDefinitions": [
+     {
+      "attributeName": "id",
+      "attributeType": "S"
+     }
+    ],
+    "keySchema": [
+     {
+      "attributeName": "id",
+      "keyType": "HASH"
+     }
+    ],
+    "provisionedThroughput": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "ReadCapacityUnits": {
+        "Ref": "DynamoDBModelTableReadIOPS"
+       },
+       "WriteCapacityUnits": {
+        "Ref": "DynamoDBModelTableWriteIOPS"
+       }
+      }
+     ]
+    },
+    "sseSpecification": {
+     "sseEnabled": false
+    },
+    "streamSpecification": {
+     "streamViewType": "NEW_AND_OLD_IMAGES"
+    },
+    "deletionProtectionEnabled": false,
+    "allowDestructiveGraphqlSchemaUpdates": true,
+    "replaceTableUponGsiUpdate": true,
+    "pointInTimeRecoverySpecification": {
+     "Fn::If": [
+      "ShouldUsePointInTimeRecovery",
+      {
+       "PointInTimeRecoveryEnabled": true
+      },
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    },
+    "billingMode": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      "PAY_PER_REQUEST",
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogTable/Default/Default"
+   }
+  },
+  "DailyLogIAMRole7784BD43": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "appsync.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Policies": [
+     {
+      "PolicyDocument": {
+       "Statement": [
+        {
+         "Action": [
+          "dynamodb:BatchGetItem",
+          "dynamodb:BatchWriteItem",
+          "dynamodb:PutItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:GetItem",
+          "dynamodb:Scan",
+          "dynamodb:Query",
+          "dynamodb:UpdateItem",
+          "dynamodb:ConditionCheckItem",
+          "dynamodb:DescribeTable",
+          "dynamodb:GetRecords",
+          "dynamodb:GetShardIterator"
+         ],
+         "Effect": "Allow",
+         "Resource": [
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "DailyLog-",
+                {
+                 "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          },
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}/*",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "DailyLog-",
+                {
+                 "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "Version": "2012-10-17"
+      },
+      "PolicyName": "DynamoDBAccess"
+     }
+    ],
+    "RoleName": {
+     "Fn::Join": [
+      "",
+      [
+       "DailyLogIAMRoled03335-",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "amplifyData"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogIAMRole/Resource"
+   }
+  },
+  "DailyLogDataSource": {
+   "Type": "AWS::AppSync::DataSource",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DynamoDBConfig": {
+     "AwsRegion": {
+      "Ref": "AWS::Region"
+     },
+     "TableName": {
+      "Fn::Select": [
+       1,
+       {
+        "Fn::Split": [
+         "/",
+         {
+          "Fn::Select": [
+           5,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::GetAtt": [
+               "DailyLogTable",
+               "TableArn"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "Name": "DailyLogTable",
+    "ServiceRoleArn": {
+     "Fn::GetAtt": [
+      "DailyLogIAMRole7784BD43",
+      "Arn"
+     ]
+    },
+    "Type": "AMAZON_DYNAMODB"
+   },
+   "DependsOn": [
+    "DailyLogIAMRole7784BD43"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogDataSource/Resource"
+   }
+  },
+  "QuerygetDailyLogauth0FunctionQuerygetDailyLogauth0FunctionAppSyncFunction65E51B48": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerygetDailyLogauth0Function/QuerygetDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetDailyLogpostAuth0FunctionQuerygetDailyLogpostAuth0FunctionAppSyncFunction8642C7DA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerygetDailyLogpostAuth0Function/QuerygetDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryGetDailyLogDataResolverFnQueryGetDailyLogDataResolverFnAppSyncFunction1877049F": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryGetDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/08f4d557693d96c1a4efba0f9dc91330e4b19772fd5477c156468843e3d9cb5e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4c6a2d29f01c6091bd1d9afe16e5849d456c96f17c3b215938c8067399532719.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QueryGetDailyLogDataResolverFn/QueryGetDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "GetDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "getDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerygetDailyLogauth0FunctionQuerygetDailyLogauth0FunctionAppSyncFunction65E51B48",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetDailyLogpostAuth0FunctionQuerygetDailyLogpostAuth0FunctionAppSyncFunction8642C7DA",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryGetDailyLogDataResolverFnQueryGetDailyLogDataResolverFnAppSyncFunction1877049F",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"getDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DailyLogTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/queryGetDailyLogResolver"
+   }
+  },
+  "QuerylistDailyLogsauth0FunctionQuerylistDailyLogsauth0FunctionAppSyncFunctionF9CFE7A9": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistDailyLogsauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerylistDailyLogsauth0Function/QuerylistDailyLogsauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistDailyLogspostAuth0FunctionQuerylistDailyLogspostAuth0FunctionAppSyncFunctionF7326683": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistDailyLogspostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerylistDailyLogspostAuth0Function/QuerylistDailyLogspostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryListDailyLogsDataResolverFnQueryListDailyLogsDataResolverFnAppSyncFunction7795BE1A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryListDailyLogsDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9fcbe070ecd3023c5bf5b966fa9584757db9762eef123bad0820bd87591b2174.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cc01911d0269d4080ea57505dc445dfc315ef7ad85d3d9d4ea1357858bff451d.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QueryListDailyLogsDataResolverFn/QueryListDailyLogsDataResolverFn.AppSyncFunction"
+   }
+  },
+  "ListDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "listDailyLogs",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerylistDailyLogsauth0FunctionQuerylistDailyLogsauth0FunctionAppSyncFunctionF9CFE7A9",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistDailyLogspostAuth0FunctionQuerylistDailyLogspostAuth0FunctionAppSyncFunctionF7326683",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryListDailyLogsDataResolverFnQueryListDailyLogsDataResolverFnAppSyncFunction7795BE1A",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"listDailyLogs\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DailyLogTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/queryListDailyLogsResolver"
+   }
+  },
+  "MutationcreateDailyLoginit0FunctionMutationcreateDailyLoginit0FunctionAppSyncFunction89DA8D7B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateDailyLoginit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a183ddccbd956316c38ef97177b8f088ef0826f62023323f5ae6053d348ccffc.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationcreateDailyLoginit0Function/MutationcreateDailyLoginit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateDailyLogauth0FunctionMutationcreateDailyLogauth0FunctionAppSyncFunction67BFBB97": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e2d507f25d93483568c55d6d1d5578c0eb61ac6a8bfc8495c602c9a499e5e0b5.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationcreateDailyLogauth0Function/MutationcreateDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateDailyLogpostAuth0FunctionMutationcreateDailyLogpostAuth0FunctionAppSyncFunctionFCF60B66": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationcreateDailyLogpostAuth0Function/MutationcreateDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationCreateDailyLogDataResolverFnMutationCreateDailyLogDataResolverFnAppSyncFunction433074F4": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationCreateDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/41aaa07cc26844c713d2955e459b4e5c7fb8b52ff9db8de21c864cdcdad80cdd.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationCreateDailyLogDataResolverFn/MutationCreateDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "CreateDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "createDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationcreateDailyLoginit0FunctionMutationcreateDailyLoginit0FunctionAppSyncFunction89DA8D7B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateDailyLogauth0FunctionMutationcreateDailyLogauth0FunctionAppSyncFunction67BFBB97",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateDailyLogpostAuth0FunctionMutationcreateDailyLogpostAuth0FunctionAppSyncFunctionFCF60B66",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationCreateDailyLogDataResolverFnMutationCreateDailyLogDataResolverFnAppSyncFunction433074F4",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"createDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DailyLogTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/mutationCreateDailyLogResolver"
+   }
+  },
+  "MutationupdateDailyLoginit0FunctionMutationupdateDailyLoginit0FunctionAppSyncFunction72F78E35": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateDailyLoginit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06db846fd14e6fc371f22b12b5545ba8e2dbfeda85d8c8d586c71c282166657b.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationupdateDailyLoginit0Function/MutationupdateDailyLoginit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateDailyLogauth0FunctionMutationupdateDailyLogauth0FunctionAppSyncFunctionAE192541": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/41236c976c3d9db667e619e37ef680a82cf1c3894165be13c7d65a349ec7fe3e.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationupdateDailyLogauth0Function/MutationupdateDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateDailyLogpostAuth0FunctionMutationupdateDailyLogpostAuth0FunctionAppSyncFunction0B2E891B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationupdateDailyLogpostAuth0Function/MutationupdateDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationUpdateDailyLogDataResolverFnMutationUpdateDailyLogDataResolverFnAppSyncFunction7C515B26": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationUpdateDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/474bf0776ec2164a13191d1a0a9e057154931e4918fea5086f49850d02a5371b.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationUpdateDailyLogDataResolverFn/MutationUpdateDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "UpdateDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "updateDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationupdateDailyLoginit0FunctionMutationupdateDailyLoginit0FunctionAppSyncFunction72F78E35",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateDailyLogauth0FunctionMutationupdateDailyLogauth0FunctionAppSyncFunctionAE192541",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateDailyLogpostAuth0FunctionMutationupdateDailyLogpostAuth0FunctionAppSyncFunction0B2E891B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationUpdateDailyLogDataResolverFnMutationUpdateDailyLogDataResolverFnAppSyncFunction7C515B26",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"updateDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DailyLogTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/mutationUpdateDailyLogResolver"
+   }
+  },
+  "MutationdeleteDailyLogauth0FunctionMutationdeleteDailyLogauth0FunctionAppSyncFunction9A286A22": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/867fb7d7eb8e4127b6d0136b82c5c3f74a52eb410297086859986f8e7e4b02aa.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationdeleteDailyLogauth0Function/MutationdeleteDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteDailyLogpostAuth0FunctionMutationdeleteDailyLogpostAuth0FunctionAppSyncFunctionEAD7EA26": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationdeleteDailyLogpostAuth0Function/MutationdeleteDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationDeleteDailyLogDataResolverFnMutationDeleteDailyLogDataResolverFnAppSyncFunction89BFA3C0": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "DailyLogDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationDeleteDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f7907d1209a2c9953a0c053df402c634e359546d70c7cc5c2e8e21ea734880f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "DailyLogDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationDeleteDailyLogDataResolverFn/MutationDeleteDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeleteDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "deleteDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteDailyLogauth0FunctionMutationdeleteDailyLogauth0FunctionAppSyncFunction9A286A22",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteDailyLogpostAuth0FunctionMutationdeleteDailyLogpostAuth0FunctionAppSyncFunctionEAD7EA26",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationDeleteDailyLogDataResolverFnMutationDeleteDailyLogDataResolverFnAppSyncFunction89BFA3C0",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"deleteDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "DailyLogTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/mutationDeleteDailyLogResolver"
+   }
+  },
+  "SubscriptiononCreateDailyLogauth0FunctionSubscriptiononCreateDailyLogauth0FunctionAppSyncFunction674E4F7D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononCreateDailyLogauth0Function/SubscriptiononCreateDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateDailyLogpostAuth0FunctionSubscriptiononCreateDailyLogpostAuth0FunctionAppSyncFunction42BE2B9B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononCreateDailyLogpostAuth0Function/SubscriptiononCreateDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnCreateDailyLogDataResolverFnSubscriptionOnCreateDailyLogDataResolverFnAppSyncFunction2A210ECA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnCreateDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptionOnCreateDailyLogDataResolverFn/SubscriptionOnCreateDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "onCreateDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateDailyLogauth0FunctionSubscriptiononCreateDailyLogauth0FunctionAppSyncFunction674E4F7D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateDailyLogpostAuth0FunctionSubscriptiononCreateDailyLogpostAuth0FunctionAppSyncFunction42BE2B9B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnCreateDailyLogDataResolverFnSubscriptionOnCreateDailyLogDataResolverFnAppSyncFunction2A210ECA",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onCreateDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/subscriptionOnCreateDailyLogResolver"
+   }
+  },
+  "SubscriptiononUpdateDailyLogauth0FunctionSubscriptiononUpdateDailyLogauth0FunctionAppSyncFunction3051B75B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononUpdateDailyLogauth0Function/SubscriptiononUpdateDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateDailyLogpostAuth0FunctionSubscriptiononUpdateDailyLogpostAuth0FunctionAppSyncFunction9F5C4F1D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononUpdateDailyLogpostAuth0Function/SubscriptiononUpdateDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnUpdateDailyLogDataResolverFnSubscriptionOnUpdateDailyLogDataResolverFnAppSyncFunctionB84E3F23": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnUpdateDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptionOnUpdateDailyLogDataResolverFn/SubscriptionOnUpdateDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "onUpdateDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateDailyLogauth0FunctionSubscriptiononUpdateDailyLogauth0FunctionAppSyncFunction3051B75B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateDailyLogpostAuth0FunctionSubscriptiononUpdateDailyLogpostAuth0FunctionAppSyncFunction9F5C4F1D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnUpdateDailyLogDataResolverFnSubscriptionOnUpdateDailyLogDataResolverFnAppSyncFunctionB84E3F23",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onUpdateDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/subscriptionOnUpdateDailyLogResolver"
+   }
+  },
+  "SubscriptiononDeleteDailyLogauth0FunctionSubscriptiononDeleteDailyLogauth0FunctionAppSyncFunction1CC49202": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteDailyLogauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononDeleteDailyLogauth0Function/SubscriptiononDeleteDailyLogauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteDailyLogpostAuth0FunctionSubscriptiononDeleteDailyLogpostAuth0FunctionAppSyncFunction0E8F3083": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteDailyLogpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononDeleteDailyLogpostAuth0Function/SubscriptiononDeleteDailyLogpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnDeleteDailyLogDataResolverFnSubscriptionOnDeleteDailyLogDataResolverFnAppSyncFunction78F54DCC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnDeleteDailyLogDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptionOnDeleteDailyLogDataResolverFn/SubscriptionOnDeleteDailyLogDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteDailyLogResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "onDeleteDailyLog",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteDailyLogauth0FunctionSubscriptiononDeleteDailyLogauth0FunctionAppSyncFunction1CC49202",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteDailyLogpostAuth0FunctionSubscriptiononDeleteDailyLogpostAuth0FunctionAppSyncFunction0E8F3083",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnDeleteDailyLogDataResolverFnSubscriptionOnDeleteDailyLogDataResolverFnAppSyncFunction78F54DCC",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onDeleteDailyLog\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/subscriptionOnDeleteDailyLogResolver"
+   }
+  },
+  "DailyLogOwnerDataResolverFnDailyLogOwnerDataResolverFnAppSyncFunction54A9FB64": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "DailyLogOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogOwnerDataResolverFn/DailyLogOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DailyLogownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "DailyLogOwnerDataResolverFnDailyLogOwnerDataResolverFnAppSyncFunction54A9FB64",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"DailyLog\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "DailyLog"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/dailyLogOwnerResolver"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WOQWvDMAyFf0vvjlZSdthxTdixG8nuRbGV4MaxgyW3lJD/PpyOjoHg6UMPvVdC+foG+x3euNBmLJztYDkRC5lWUI+q6v0XRpxIKGaogjdWbPCqIQ4palJVYgnTH/b+ueONz4u5e5yC6eAbO0dHZFIWJ1ia4B7u4GhVOM989xqWerPXXY2C7fPlf/pIXucSVfC9HVLErdFvsrtSXBUfzshMwvCeRfEBjkmPJLnAmr2fSeYkaju3goP1w6p8MAQXfrmWe8izu7C1RUxe7ETQPPQHZ8HaRjYBAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "GetAttDailyLogTableStreamArn": {
+   "Description": "Your DynamoDB table StreamArn.",
+   "Value": {
+    "Fn::GetAtt": [
+     "DailyLogTable",
+     "TableStreamArn"
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "GetAtt:DailyLogTable:StreamArn"
+      ]
+     ]
+    }
+   }
+  },
+  "GetAttDailyLogTableName": {
+   "Description": "Your DynamoDB table name.",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "DailyLog-",
+      {
+       "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+      },
+      "-NONE"
+     ]
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "GetAtt:DailyLogTable:Name"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}

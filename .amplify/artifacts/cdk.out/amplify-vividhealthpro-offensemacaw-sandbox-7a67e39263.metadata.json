@@ -1,0 +1,4453 @@
+{
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib..."
+      ]
+    },
+    {
+      "type": "aws:cdk:warning",
+      "data": "No cross-stack-reference strength configured, defaulting to \"strong\". We recommend you set feature flag \"@aws-cdk/core:defaultCrossStackReferences\" to \"both\", then deploy everywhere, then set it to \"weak\". Alternatively, set it to \"strong\" explicitly to lock in the current producer-protecting behavior. (See: https://github.com/aws/aws-cdk/blob/main/packages/aws-cdk-lib/README.md#reference-strength) [ack: @aws-cdk/core:crossStackReferencesDefaultStrong]",
+      "trace": [
+        "Annotations.addMessage (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:3441)",
+        "Annotations.addWarningV2 (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/annotations.js:1:2129)",
+        "resolveValue (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:6065)",
+        "resolveReferences (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/private/refs.js:1:4778)",
+        "prepareApp (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/private/prepare-app.js:1:1514)",
+        "synthesize (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/private/synthesis.js:1:3580)",
+        "App.synth (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/stage.js:1:4636)",
+        "App.synth (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/aws-cdk-lib/core/lib/app.js:1:4814)",
+        "process.<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/backend/src/default_stack_factory.ts:15:11)",
+        "Object.onceWrapper (node:events:639:26)",
+        "process.emit (node:events:524:28)",
+        "cdkToolkit.fromAssemblyBuilder.contextStore (file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/backend-deployer/lib/cdk_deployer.js:204:21)",
+        "async Object.produce (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-cdk/toolkit-lib/lib/api/cloud-assembly/source-builder.js:130:36)",
+        "async ContextAwareCloudAssemblySource.produce (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-cdk/toolkit-lib/lib/api/cloud-assembly/private/context-aware-source.js:49:33)",
+        "async assemblyFromSource (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-cdk/toolkit-lib/lib/toolkit/private/index.js:21:85)",
+        "async synthAndMeasure (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-cdk/toolkit-lib/lib/toolkit/toolkit.js:1290:21)",
+        "async Toolkit.synth (/home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-cdk/toolkit-lib/lib/toolkit/toolkit.js:245:26)",
+        "async CDKDeployer.deploy (file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/backend-deployer/lib/cdk_deployer.js:51:29)",
+        "async AmplifySandboxExecutor.<anonymous> (file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/sandbox/lib/sandbox_executor.js:14:43)",
+        "async file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:216:38",
+        "async FileWatchingSandbox.deploy (file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:213:9)",
+        "async file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:138:13",
+        "async FileWatchingSandbox.start (file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:179:13)",
+        "async Object.handler (file:///home/offensemacaw/Downloads/files/fasttrack-app/node_modules/@aws-amplify/backend-cli/lib/commands/sandbox/sandbox_command.js:79:9)"
+      ]
+    },
+    {
+      "type": "aws:cdk:stack-tags",
+      "data": [
+        {
+          "key": "amplify:deployment-type",
+          "value": "sandbox"
+        },
+        {
+          "key": "created-by",
+          "value": "amplify"
+        }
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/deploymentType": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "deploymentType"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/region": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "region"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals, @aws-amplify/backend-deployer, @aws-cdk/toolkit-lib..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/userPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "userPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/webClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "webClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/identityPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "identityPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/authRegion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "authRegion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/allowUnauthenticatedIdentities": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "allowUnauthenticatedIdentities"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/signupAttributes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "signupAttributes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/usernameAttributes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "usernameAttributes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/verificationMechanisms": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "verificationMechanisms"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/passwordPolicyMinLength": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "passwordPolicyMinLength"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/passwordPolicyRequirements": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "passwordPolicyRequirements"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/mfaConfiguration": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "mfaConfiguration"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/mfaTypes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "mfaTypes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/passwordlessOptions": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "passwordlessOptions"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/socialProviders": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "socialProviders"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/oauthCognitoDomain": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthCognitoDomain"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/oauthScope": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthScope"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/oauthRedirectSignIn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthRedirectSignIn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/oauthRedirectSignOut": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthRedirectSignOut"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/oauthResponseType": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthResponseType"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/oauthClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "oauthClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/groups": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "groups"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/awsAppsyncApiId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "awsAppsyncApiId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/awsAppsyncApiEndpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "awsAppsyncApiEndpoint"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/awsAppsyncAuthenticationType": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "awsAppsyncAuthenticationType"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/awsAppsyncRegion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "awsAppsyncRegion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/amplifyApiModelSchemaS3Uri": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyApiModelSchemaS3Uri"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/awsAppsyncAdditionalAuthenticationTypes": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "awsAppsyncAdditionalAuthenticationTypes"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/backend-output-storage...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend-output-storage, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthUserPoolD676BF12Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthUserPoolD676BF12Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthUserPoolAppClientF46B86C1Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthUserPoolAppClientF46B86C1Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth.NestedStack/auth.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "auth179371D7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/DynamoDBModelTableReadIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableReadIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/DynamoDBModelTableWriteIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableWriteIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/DynamoDBBillingMode": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBBillingMode"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/DynamoDBEnablePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnablePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/DynamoDBEnableServerSideEncryption": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnableServerSideEncryption"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+      "data": true
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 2
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 2
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthUserPoolD676BF12Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthUserPoolD676BF12Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64GraphQLUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64GraphQLUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBF6AA464BDestinationBucketArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBF6AA464BDestinationBucketArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data.NestedStack/data.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "data7552DF31"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyAuth/IdentityPool": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthIdentityPool3FDE84CC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...defineBackend in @aws-amplify/backend...",
+        "<anonymous> (/home/offensemacaw/Downloads/files/fasttrack-app/amplify/backend.ts:4:1)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/modelIntrospectionSchemaBucket/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "modelIntrospectionSchemaBucketF566B665"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend..."
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketAutoDeleteObjects"
+      }
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.map (:)",
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.map (:)",
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.map (:)",
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/backend...",
+        "Array.map (:)",
+        "...<anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyAuth/UserPool/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthUserPool4BA7F805"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyAuth/UserPoolAppClient/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthUserPoolAppClient2626C6F8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)",
+        "...@aws-amplify/backend..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyAuth/authenticatedUserRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/auth-construct, @aws-amplify/backend-auth, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/GraphQLAPI/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataGraphQLAPI42A6FA33"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/GraphQLAPI/TransformerSchema": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/GraphQLAPI/NONE_DS": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "NONE_DS"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventDAB3A0F0Arn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventDAB3A0F0Arn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/DynamoDBModelTableReadIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableReadIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/DynamoDBModelTableWriteIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableWriteIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/DynamoDBBillingMode": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBBillingMode"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/DynamoDBEnablePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnablePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/DynamoDBEnableServerSideEncryption": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnableServerSideEncryption"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/HasEnvironmentParameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "HasEnvironmentParameter"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/ShouldUsePayPerRequestBilling": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ShouldUsePayPerRequestBilling"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/ShouldUsePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ShouldUsePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileTable": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/CustomTableUserProfileTable": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/GetAttUserProfileTableStreamArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetAttUserProfileTableStreamArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/GetAttUserProfileTableName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetAttUserProfileTableName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileIAMRole": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfileIAMRole"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileDataSource": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfileTable"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/queryGetUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Query.getUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/queryListUserProfilesResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ListUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Query.listUserProfiles"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/mutationCreateUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.createUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/mutationUpdateUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.updateUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/mutationDeleteUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeleteUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.deleteUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/subscriptionOnCreateUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onCreateUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/subscriptionOnUpdateUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onUpdateUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/subscriptionOnDeleteUserProfileResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteUserProfileResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onDeleteUserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/userProfileOwnerResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserProfileownerResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfile.owner"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventDAB3A0F0Arn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile.NestedStack/UserProfile.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataUserProfileNestedStackUserProfileNestedStackResource1B3713C5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DynamoDBModelTableReadIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableReadIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DynamoDBModelTableWriteIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableWriteIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DynamoDBBillingMode": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBBillingMode"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DynamoDBEnablePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnablePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DynamoDBEnableServerSideEncryption": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnableServerSideEncryption"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/HasEnvironmentParameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "HasEnvironmentParameter"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/ShouldUsePayPerRequestBilling": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ShouldUsePayPerRequestBilling"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/ShouldUsePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ShouldUsePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogTable": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/CustomTableDailyLogTable": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/GetAttDailyLogTableStreamArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetAttDailyLogTableStreamArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/GetAttDailyLogTableName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetAttDailyLogTableName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogIAMRole": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLogIAMRole"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogDataSource": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLogTable"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/queryGetDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Query.getDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/queryListDailyLogsResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ListDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Query.listDailyLogs"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/mutationCreateDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.createDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/mutationUpdateDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.updateDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/mutationDeleteDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeleteDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.deleteDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/subscriptionOnCreateDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onCreateDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/subscriptionOnUpdateDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onUpdateDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/subscriptionOnDeleteDailyLogResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteDailyLogResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onDeleteDailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/dailyLogOwnerResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DailyLogownerResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLog.owner"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventDAB3A0F0Arn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog.NestedStack/DailyLog.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataDailyLogNestedStackDailyLogNestedStackResource8003D5A1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/DynamoDBModelTableReadIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableReadIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/DynamoDBModelTableWriteIOPS": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBModelTableWriteIOPS"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/DynamoDBBillingMode": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBBillingMode"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/DynamoDBEnablePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnablePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/DynamoDBEnableServerSideEncryption": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDBEnableServerSideEncryption"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/HasEnvironmentParameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "HasEnvironmentParameter"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/ShouldUsePayPerRequestBilling": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ShouldUsePayPerRequestBilling"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/ShouldUsePointInTimeRecovery": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ShouldUsePointInTimeRecovery"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryTable": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/CustomTableWeightEntryTable": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/GetAttWeightEntryTableStreamArn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetAttWeightEntryTableStreamArn"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/GetAttWeightEntryTableName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetAttWeightEntryTableName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryIAMRole": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntryIAMRole"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryDataSource": [
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntryTable"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/queryGetWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Query.getWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/queryListWeightEntriesResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ListWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Query.listWeightEntries"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/mutationCreateWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.createWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/mutationUpdateWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.updateWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/mutationDeleteWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DeleteWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Mutation.deleteWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/subscriptionOnCreateWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onCreateWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/subscriptionOnUpdateWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onUpdateWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/subscriptionOnDeleteWeightEntryResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteWeightEntryResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "Subscription.onDeleteWeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/weightEntryOwnerResolver": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WeightEntryownerResolver"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntry.owner"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventDAB3A0F0Arn": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/reference-to-amplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputs.amplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry.NestedStack/WeightEntry.NestedStackResource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataWeightEntryNestedStackWeightEntryNestedStackResource688B717F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketPolicyStatements"
+      }
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataGraphQLAPINONEDS684BF699"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "NONE_DS"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyManagedTableIsCompleteRoleF825222C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyTableWaiterStateMachine060600BC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileIAMRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserProfileIAMRoleA4E2934B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfileIAMRole"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileDataSource/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserProfileDataSource"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfileTable"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/QuerygetUserProfileauth0Function/QuerygetUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetUserProfileauth0FunctionQuerygetUserProfileauth0FunctionAppSyncFunctionDAD22839"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/QuerygetUserProfilepostAuth0Function/QuerygetUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetUserProfilepostAuth0FunctionQuerygetUserProfilepostAuth0FunctionAppSyncFunction92890504"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/QueryGetUserProfileDataResolverFn/QueryGetUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QueryGetUserProfileDataResolverFnQueryGetUserProfileDataResolverFnAppSyncFunction8EB8BD57"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QueryGetUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/QuerylistUserProfilesauth0Function/QuerylistUserProfilesauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistUserProfilesauth0FunctionQuerylistUserProfilesauth0FunctionAppSyncFunction468B41DC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistUserProfilesauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/QuerylistUserProfilespostAuth0Function/QuerylistUserProfilespostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistUserProfilespostAuth0FunctionQuerylistUserProfilespostAuth0FunctionAppSyncFunction01122A7A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistUserProfilespostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/QueryListUserProfilesDataResolverFn/QueryListUserProfilesDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QueryListUserProfilesDataResolverFnQueryListUserProfilesDataResolverFnAppSyncFunctionA05E8B7A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QueryListUserProfilesDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationcreateUserProfileinit0Function/MutationcreateUserProfileinit0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateUserProfileinit0FunctionMutationcreateUserProfileinit0FunctionAppSyncFunction7EFE9ED4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateUserProfileinit0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationcreateUserProfileauth0Function/MutationcreateUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateUserProfileauth0FunctionMutationcreateUserProfileauth0FunctionAppSyncFunctionCF3841B8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationcreateUserProfilepostAuth0Function/MutationcreateUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateUserProfilepostAuth0FunctionMutationcreateUserProfilepostAuth0FunctionAppSyncFunctionF0C8FEFF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationCreateUserProfileDataResolverFn/MutationCreateUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationCreateUserProfileDataResolverFnMutationCreateUserProfileDataResolverFnAppSyncFunction120FE646"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationCreateUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationupdateUserProfileinit0Function/MutationupdateUserProfileinit0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateUserProfileinit0FunctionMutationupdateUserProfileinit0FunctionAppSyncFunction9A840BAA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateUserProfileinit0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationupdateUserProfileauth0Function/MutationupdateUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateUserProfileauth0FunctionMutationupdateUserProfileauth0FunctionAppSyncFunction7E8F945B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationupdateUserProfilepostAuth0Function/MutationupdateUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateUserProfilepostAuth0FunctionMutationupdateUserProfilepostAuth0FunctionAppSyncFunction206AFA76"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationUpdateUserProfileDataResolverFn/MutationUpdateUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationUpdateUserProfileDataResolverFnMutationUpdateUserProfileDataResolverFnAppSyncFunction1707D92F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationUpdateUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationdeleteUserProfileauth0Function/MutationdeleteUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeleteUserProfileauth0FunctionMutationdeleteUserProfileauth0FunctionAppSyncFunction4A3AC4FD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeleteUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationdeleteUserProfilepostAuth0Function/MutationdeleteUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeleteUserProfilepostAuth0FunctionMutationdeleteUserProfilepostAuth0FunctionAppSyncFunctionEE3F21F4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeleteUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/MutationDeleteUserProfileDataResolverFn/MutationDeleteUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationDeleteUserProfileDataResolverFnMutationDeleteUserProfileDataResolverFnAppSyncFunction4835094F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationDeleteUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptiononCreateUserProfileauth0Function/SubscriptiononCreateUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateUserProfileauth0FunctionSubscriptiononCreateUserProfileauth0FunctionAppSyncFunctionD90BBD82"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononCreateUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptiononCreateUserProfilepostAuth0Function/SubscriptiononCreateUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateUserProfilepostAuth0FunctionSubscriptiononCreateUserProfilepostAuth0FunctionAppSyncFunctionD659A080"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononCreateUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptionOnCreateUserProfileDataResolverFn/SubscriptionOnCreateUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnCreateUserProfileDataResolverFnSubscriptionOnCreateUserProfileDataResolverFnAppSyncFunction08AFEB08"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnCreateUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptiononUpdateUserProfileauth0Function/SubscriptiononUpdateUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateUserProfileauth0FunctionSubscriptiononUpdateUserProfileauth0FunctionAppSyncFunction48B7E90B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononUpdateUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptiononUpdateUserProfilepostAuth0Function/SubscriptiononUpdateUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateUserProfilepostAuth0FunctionSubscriptiononUpdateUserProfilepostAuth0FunctionAppSyncFunction446153A7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononUpdateUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptionOnUpdateUserProfileDataResolverFn/SubscriptionOnUpdateUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnUpdateUserProfileDataResolverFnSubscriptionOnUpdateUserProfileDataResolverFnAppSyncFunctionBCF119CA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnUpdateUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptiononDeleteUserProfileauth0Function/SubscriptiononDeleteUserProfileauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteUserProfileauth0FunctionSubscriptiononDeleteUserProfileauth0FunctionAppSyncFunction4558BD0E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononDeleteUserProfileauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptiononDeleteUserProfilepostAuth0Function/SubscriptiononDeleteUserProfilepostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteUserProfilepostAuth0FunctionSubscriptiononDeleteUserProfilepostAuth0FunctionAppSyncFunction3E69A1F9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononDeleteUserProfilepostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/SubscriptionOnDeleteUserProfileDataResolverFn/SubscriptionOnDeleteUserProfileDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnDeleteUserProfileDataResolverFnSubscriptionOnDeleteUserProfileDataResolverFnAppSyncFunction6EDD6652"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnDeleteUserProfileDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileOwnerDataResolverFn/UserProfileOwnerDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserProfileOwnerDataResolverFnUserProfileOwnerDataResolverFnAppSyncFunction23A35218"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfileOwnerDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogIAMRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DailyLogIAMRole7784BD43"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLogIAMRole"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogDataSource/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DailyLogDataSource"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLogTable"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerygetDailyLogauth0Function/QuerygetDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetDailyLogauth0FunctionQuerygetDailyLogauth0FunctionAppSyncFunction65E51B48"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerygetDailyLogpostAuth0Function/QuerygetDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetDailyLogpostAuth0FunctionQuerygetDailyLogpostAuth0FunctionAppSyncFunction8642C7DA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QueryGetDailyLogDataResolverFn/QueryGetDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QueryGetDailyLogDataResolverFnQueryGetDailyLogDataResolverFnAppSyncFunction1877049F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QueryGetDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerylistDailyLogsauth0Function/QuerylistDailyLogsauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistDailyLogsauth0FunctionQuerylistDailyLogsauth0FunctionAppSyncFunctionF9CFE7A9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistDailyLogsauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QuerylistDailyLogspostAuth0Function/QuerylistDailyLogspostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistDailyLogspostAuth0FunctionQuerylistDailyLogspostAuth0FunctionAppSyncFunctionF7326683"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistDailyLogspostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/QueryListDailyLogsDataResolverFn/QueryListDailyLogsDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QueryListDailyLogsDataResolverFnQueryListDailyLogsDataResolverFnAppSyncFunction7795BE1A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QueryListDailyLogsDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationcreateDailyLoginit0Function/MutationcreateDailyLoginit0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateDailyLoginit0FunctionMutationcreateDailyLoginit0FunctionAppSyncFunction89DA8D7B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateDailyLoginit0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationcreateDailyLogauth0Function/MutationcreateDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateDailyLogauth0FunctionMutationcreateDailyLogauth0FunctionAppSyncFunction67BFBB97"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationcreateDailyLogpostAuth0Function/MutationcreateDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateDailyLogpostAuth0FunctionMutationcreateDailyLogpostAuth0FunctionAppSyncFunctionFCF60B66"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationCreateDailyLogDataResolverFn/MutationCreateDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationCreateDailyLogDataResolverFnMutationCreateDailyLogDataResolverFnAppSyncFunction433074F4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationCreateDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationupdateDailyLoginit0Function/MutationupdateDailyLoginit0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateDailyLoginit0FunctionMutationupdateDailyLoginit0FunctionAppSyncFunction72F78E35"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateDailyLoginit0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationupdateDailyLogauth0Function/MutationupdateDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateDailyLogauth0FunctionMutationupdateDailyLogauth0FunctionAppSyncFunctionAE192541"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationupdateDailyLogpostAuth0Function/MutationupdateDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateDailyLogpostAuth0FunctionMutationupdateDailyLogpostAuth0FunctionAppSyncFunction0B2E891B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationUpdateDailyLogDataResolverFn/MutationUpdateDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationUpdateDailyLogDataResolverFnMutationUpdateDailyLogDataResolverFnAppSyncFunction7C515B26"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationUpdateDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationdeleteDailyLogauth0Function/MutationdeleteDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeleteDailyLogauth0FunctionMutationdeleteDailyLogauth0FunctionAppSyncFunction9A286A22"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeleteDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationdeleteDailyLogpostAuth0Function/MutationdeleteDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeleteDailyLogpostAuth0FunctionMutationdeleteDailyLogpostAuth0FunctionAppSyncFunctionEAD7EA26"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeleteDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/MutationDeleteDailyLogDataResolverFn/MutationDeleteDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationDeleteDailyLogDataResolverFnMutationDeleteDailyLogDataResolverFnAppSyncFunction89BFA3C0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationDeleteDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononCreateDailyLogauth0Function/SubscriptiononCreateDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateDailyLogauth0FunctionSubscriptiononCreateDailyLogauth0FunctionAppSyncFunction674E4F7D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononCreateDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononCreateDailyLogpostAuth0Function/SubscriptiononCreateDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateDailyLogpostAuth0FunctionSubscriptiononCreateDailyLogpostAuth0FunctionAppSyncFunction42BE2B9B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononCreateDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptionOnCreateDailyLogDataResolverFn/SubscriptionOnCreateDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnCreateDailyLogDataResolverFnSubscriptionOnCreateDailyLogDataResolverFnAppSyncFunction2A210ECA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnCreateDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononUpdateDailyLogauth0Function/SubscriptiononUpdateDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateDailyLogauth0FunctionSubscriptiononUpdateDailyLogauth0FunctionAppSyncFunction3051B75B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononUpdateDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononUpdateDailyLogpostAuth0Function/SubscriptiononUpdateDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateDailyLogpostAuth0FunctionSubscriptiononUpdateDailyLogpostAuth0FunctionAppSyncFunction9F5C4F1D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononUpdateDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptionOnUpdateDailyLogDataResolverFn/SubscriptionOnUpdateDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnUpdateDailyLogDataResolverFnSubscriptionOnUpdateDailyLogDataResolverFnAppSyncFunctionB84E3F23"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnUpdateDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononDeleteDailyLogauth0Function/SubscriptiononDeleteDailyLogauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteDailyLogauth0FunctionSubscriptiononDeleteDailyLogauth0FunctionAppSyncFunction1CC49202"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononDeleteDailyLogauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptiononDeleteDailyLogpostAuth0Function/SubscriptiononDeleteDailyLogpostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteDailyLogpostAuth0FunctionSubscriptiononDeleteDailyLogpostAuth0FunctionAppSyncFunction0E8F3083"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononDeleteDailyLogpostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/SubscriptionOnDeleteDailyLogDataResolverFn/SubscriptionOnDeleteDailyLogDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnDeleteDailyLogDataResolverFnSubscriptionOnDeleteDailyLogDataResolverFnAppSyncFunction78F54DCC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnDeleteDailyLogDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogOwnerDataResolverFn/DailyLogOwnerDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DailyLogOwnerDataResolverFnDailyLogOwnerDataResolverFnAppSyncFunction54A9FB64"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLogOwnerDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryIAMRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WeightEntryIAMRole37ED015C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntryIAMRole"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryDataSource/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WeightEntryDataSource"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntryTable"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerygetWeightEntryauth0Function/QuerygetWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetWeightEntryauth0FunctionQuerygetWeightEntryauth0FunctionAppSyncFunction9A759C72"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerygetWeightEntrypostAuth0Function/QuerygetWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetWeightEntrypostAuth0FunctionQuerygetWeightEntrypostAuth0FunctionAppSyncFunction720F0CBE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QueryGetWeightEntryDataResolverFn/QueryGetWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QueryGetWeightEntryDataResolverFnQueryGetWeightEntryDataResolverFnAppSyncFunctionD2E976EC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QueryGetWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerylistWeightEntriesauth0Function/QuerylistWeightEntriesauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistWeightEntriesauth0FunctionQuerylistWeightEntriesauth0FunctionAppSyncFunction95FA99F4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistWeightEntriesauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerylistWeightEntriespostAuth0Function/QuerylistWeightEntriespostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistWeightEntriespostAuth0FunctionQuerylistWeightEntriespostAuth0FunctionAppSyncFunctionB6185800"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistWeightEntriespostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QueryListWeightEntriesDataResolverFn/QueryListWeightEntriesDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QueryListWeightEntriesDataResolverFnQueryListWeightEntriesDataResolverFnAppSyncFunctionF3739944"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QueryListWeightEntriesDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationcreateWeightEntryinit0Function/MutationcreateWeightEntryinit0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateWeightEntryinit0FunctionMutationcreateWeightEntryinit0FunctionAppSyncFunction53EDBE60"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateWeightEntryinit0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationcreateWeightEntryauth0Function/MutationcreateWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateWeightEntryauth0FunctionMutationcreateWeightEntryauth0FunctionAppSyncFunction55610EB3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationcreateWeightEntrypostAuth0Function/MutationcreateWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreateWeightEntrypostAuth0FunctionMutationcreateWeightEntrypostAuth0FunctionAppSyncFunction519FB791"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreateWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationCreateWeightEntryDataResolverFn/MutationCreateWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationCreateWeightEntryDataResolverFnMutationCreateWeightEntryDataResolverFnAppSyncFunctionD5999903"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationCreateWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationupdateWeightEntryinit0Function/MutationupdateWeightEntryinit0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateWeightEntryinit0FunctionMutationupdateWeightEntryinit0FunctionAppSyncFunction0820845C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateWeightEntryinit0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationupdateWeightEntryauth0Function/MutationupdateWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateWeightEntryauth0FunctionMutationupdateWeightEntryauth0FunctionAppSyncFunction52104677"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationupdateWeightEntrypostAuth0Function/MutationupdateWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdateWeightEntrypostAuth0FunctionMutationupdateWeightEntrypostAuth0FunctionAppSyncFunction771337B2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdateWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationUpdateWeightEntryDataResolverFn/MutationUpdateWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationUpdateWeightEntryDataResolverFnMutationUpdateWeightEntryDataResolverFnAppSyncFunctionC4087ED8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationUpdateWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationdeleteWeightEntryauth0Function/MutationdeleteWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeleteWeightEntryauth0FunctionMutationdeleteWeightEntryauth0FunctionAppSyncFunction289B8F58"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeleteWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationdeleteWeightEntrypostAuth0Function/MutationdeleteWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeleteWeightEntrypostAuth0FunctionMutationdeleteWeightEntrypostAuth0FunctionAppSyncFunction86A5306D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeleteWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationDeleteWeightEntryDataResolverFn/MutationDeleteWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationDeleteWeightEntryDataResolverFnMutationDeleteWeightEntryDataResolverFnAppSyncFunctionD7C66978"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationDeleteWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononCreateWeightEntryauth0Function/SubscriptiononCreateWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateWeightEntryauth0FunctionSubscriptiononCreateWeightEntryauth0FunctionAppSyncFunctionABE27B41"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononCreateWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononCreateWeightEntrypostAuth0Function/SubscriptiononCreateWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononCreateWeightEntrypostAuth0FunctionSubscriptiononCreateWeightEntrypostAuth0FunctionAppSyncFunctionD2E8FB3D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononCreateWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptionOnCreateWeightEntryDataResolverFn/SubscriptionOnCreateWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnCreateWeightEntryDataResolverFnSubscriptionOnCreateWeightEntryDataResolverFnAppSyncFunctionBBC6EF03"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnCreateWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononUpdateWeightEntryauth0Function/SubscriptiononUpdateWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateWeightEntryauth0FunctionSubscriptiononUpdateWeightEntryauth0FunctionAppSyncFunctionA7139A94"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononUpdateWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononUpdateWeightEntrypostAuth0Function/SubscriptiononUpdateWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononUpdateWeightEntrypostAuth0FunctionSubscriptiononUpdateWeightEntrypostAuth0FunctionAppSyncFunction4435C5C6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononUpdateWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptionOnUpdateWeightEntryDataResolverFn/SubscriptionOnUpdateWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnUpdateWeightEntryDataResolverFnSubscriptionOnUpdateWeightEntryDataResolverFnAppSyncFunction5E5D5575"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnUpdateWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononDeleteWeightEntryauth0Function/SubscriptiononDeleteWeightEntryauth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteWeightEntryauth0FunctionSubscriptiononDeleteWeightEntryauth0FunctionAppSyncFunction69EB4C38"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononDeleteWeightEntryauth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononDeleteWeightEntrypostAuth0Function/SubscriptiononDeleteWeightEntrypostAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptiononDeleteWeightEntrypostAuth0FunctionSubscriptiononDeleteWeightEntrypostAuth0FunctionAppSyncFunction07A4A27F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptiononDeleteWeightEntrypostAuth0Function"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptionOnDeleteWeightEntryDataResolverFn/SubscriptionOnDeleteWeightEntryDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SubscriptionOnDeleteWeightEntryDataResolverFnSubscriptionOnDeleteWeightEntryDataResolverFnAppSyncFunctionC29975DA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "SubscriptionOnDeleteWeightEntryDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryOwnerDataResolverFn/WeightEntryOwnerDataResolverFn.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WeightEntryOwnerDataResolverFnWeightEntryOwnerDataResolverFnAppSyncFunction5E8CBD53"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntryOwnerDataResolverFn"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, <anonymous> in @aws-amplify/backend...",
+        "Array.forEach (:)"
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketAutoDeleteObjects"
+      }
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyTableWaiterStateMachineRole470BE899"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)",
+        "...@aws-amplify/graphql-api-construct..."
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/UserProfile/UserProfileTable/Default/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserProfileTable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "UserProfile"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/DailyLog/DailyLogTable/Default/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DailyLogTable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "DailyLog"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryTable/Default/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "WeightEntryTable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, <anonymous> in @aws-amplify/graphql-api-construct...",
+        "Array.forEach (:)",
+        "...<anonymous> in @aws-amplify/graphql-api-construct...",
+        "Map.forEach (:)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "WeightEntry"
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketPolicyStatements"
+      }
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, @aws-amplify/graphql-api-construct...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ]
+}

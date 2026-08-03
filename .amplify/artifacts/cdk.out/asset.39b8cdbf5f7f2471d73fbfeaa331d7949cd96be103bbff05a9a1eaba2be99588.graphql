@@ -1,0 +1,517 @@
+type UserProfile @aws_iam @aws_cognito_user_pools {
+  userId: String!
+  name: String
+  age: Int
+  heightCm: Float
+  weightKg: Float
+  goalWeight: Float
+  activity: String
+  dietPref: String
+  units: String
+  fastHours: Int
+  burnGoal: Int
+  calorieGoal: Int
+  waterGoalL: Float
+  theme: String
+  id: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  owner: String
+}
+
+type DailyLog @aws_iam @aws_cognito_user_pools {
+  userId: String!
+  date: String!
+  meals: String
+  exercises: String
+  alcLog: String
+  waterMl: Float
+  extraSugar: Float
+  coffeeType: String
+  coffeeCount: Int
+  fastingStart: String
+  fastingCompleted: Boolean
+  id: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  owner: String
+}
+
+type WeightEntry @aws_iam @aws_cognito_user_pools {
+  userId: String!
+  date: String!
+  kg: Float!
+  bmi: Float
+  id: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  owner: String
+}
+
+input AmplifyAIConversationTurnErrorInput {
+  errorType: String!
+  message: String!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelUserProfileConnection @aws_iam @aws_cognito_user_pools {
+  items: [UserProfile]!
+  nextToken: String
+}
+
+input ModelUserProfileFilterInput {
+  userId: ModelStringInput
+  name: ModelStringInput
+  age: ModelIntInput
+  heightCm: ModelFloatInput
+  weightKg: ModelFloatInput
+  goalWeight: ModelFloatInput
+  activity: ModelStringInput
+  dietPref: ModelStringInput
+  units: ModelStringInput
+  fastHours: ModelIntInput
+  burnGoal: ModelIntInput
+  calorieGoal: ModelIntInput
+  waterGoalL: ModelFloatInput
+  theme: ModelStringInput
+  id: ModelIDInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelUserProfileFilterInput]
+  or: [ModelUserProfileFilterInput]
+  not: ModelUserProfileFilterInput
+  owner: ModelStringInput
+}
+
+type Query {
+  getUserProfile(id: ID!): UserProfile @aws_iam @aws_cognito_user_pools
+  listUserProfiles(filter: ModelUserProfileFilterInput, limit: Int, nextToken: String): ModelUserProfileConnection @aws_iam @aws_cognito_user_pools
+  getDailyLog(id: ID!): DailyLog @aws_iam @aws_cognito_user_pools
+  listDailyLogs(filter: ModelDailyLogFilterInput, limit: Int, nextToken: String): ModelDailyLogConnection @aws_iam @aws_cognito_user_pools
+  getWeightEntry(id: ID!): WeightEntry @aws_iam @aws_cognito_user_pools
+  listWeightEntries(filter: ModelWeightEntryFilterInput, limit: Int, nextToken: String): ModelWeightEntryConnection @aws_iam @aws_cognito_user_pools
+}
+
+input ModelUserProfileConditionInput {
+  userId: ModelStringInput
+  name: ModelStringInput
+  age: ModelIntInput
+  heightCm: ModelFloatInput
+  weightKg: ModelFloatInput
+  goalWeight: ModelFloatInput
+  activity: ModelStringInput
+  dietPref: ModelStringInput
+  units: ModelStringInput
+  fastHours: ModelIntInput
+  burnGoal: ModelIntInput
+  calorieGoal: ModelIntInput
+  waterGoalL: ModelFloatInput
+  theme: ModelStringInput
+  and: [ModelUserProfileConditionInput]
+  or: [ModelUserProfileConditionInput]
+  not: ModelUserProfileConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  owner: ModelStringInput
+}
+
+input CreateUserProfileInput {
+  userId: String!
+  name: String
+  age: Int
+  heightCm: Float
+  weightKg: Float
+  goalWeight: Float
+  activity: String
+  dietPref: String
+  units: String
+  fastHours: Int
+  burnGoal: Int
+  calorieGoal: Int
+  waterGoalL: Float
+  theme: String
+  id: ID
+}
+
+input UpdateUserProfileInput {
+  userId: String
+  name: String
+  age: Int
+  heightCm: Float
+  weightKg: Float
+  goalWeight: Float
+  activity: String
+  dietPref: String
+  units: String
+  fastHours: Int
+  burnGoal: Int
+  calorieGoal: Int
+  waterGoalL: Float
+  theme: String
+  id: ID!
+}
+
+input DeleteUserProfileInput {
+  id: ID!
+}
+
+type Mutation {
+  createUserProfile(input: CreateUserProfileInput!, condition: ModelUserProfileConditionInput): UserProfile @aws_iam @aws_cognito_user_pools
+  updateUserProfile(input: UpdateUserProfileInput!, condition: ModelUserProfileConditionInput): UserProfile @aws_iam @aws_cognito_user_pools
+  deleteUserProfile(input: DeleteUserProfileInput!, condition: ModelUserProfileConditionInput): UserProfile @aws_iam @aws_cognito_user_pools
+  createDailyLog(input: CreateDailyLogInput!, condition: ModelDailyLogConditionInput): DailyLog @aws_iam @aws_cognito_user_pools
+  updateDailyLog(input: UpdateDailyLogInput!, condition: ModelDailyLogConditionInput): DailyLog @aws_iam @aws_cognito_user_pools
+  deleteDailyLog(input: DeleteDailyLogInput!, condition: ModelDailyLogConditionInput): DailyLog @aws_iam @aws_cognito_user_pools
+  createWeightEntry(input: CreateWeightEntryInput!, condition: ModelWeightEntryConditionInput): WeightEntry @aws_iam @aws_cognito_user_pools
+  updateWeightEntry(input: UpdateWeightEntryInput!, condition: ModelWeightEntryConditionInput): WeightEntry @aws_iam @aws_cognito_user_pools
+  deleteWeightEntry(input: DeleteWeightEntryInput!, condition: ModelWeightEntryConditionInput): WeightEntry @aws_iam @aws_cognito_user_pools
+}
+
+input ModelSubscriptionUserProfileFilterInput {
+  userId: ModelSubscriptionStringInput
+  name: ModelSubscriptionStringInput
+  age: ModelSubscriptionIntInput
+  heightCm: ModelSubscriptionFloatInput
+  weightKg: ModelSubscriptionFloatInput
+  goalWeight: ModelSubscriptionFloatInput
+  activity: ModelSubscriptionStringInput
+  dietPref: ModelSubscriptionStringInput
+  units: ModelSubscriptionStringInput
+  fastHours: ModelSubscriptionIntInput
+  burnGoal: ModelSubscriptionIntInput
+  calorieGoal: ModelSubscriptionIntInput
+  waterGoalL: ModelSubscriptionFloatInput
+  theme: ModelSubscriptionStringInput
+  id: ModelSubscriptionIDInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionUserProfileFilterInput]
+  or: [ModelSubscriptionUserProfileFilterInput]
+  owner: ModelStringInput
+}
+
+type Subscription {
+  onCreateUserProfile(filter: ModelSubscriptionUserProfileFilterInput, owner: String): UserProfile @aws_subscribe(mutations: ["createUserProfile"]) @aws_iam @aws_cognito_user_pools
+  onUpdateUserProfile(filter: ModelSubscriptionUserProfileFilterInput, owner: String): UserProfile @aws_subscribe(mutations: ["updateUserProfile"]) @aws_iam @aws_cognito_user_pools
+  onDeleteUserProfile(filter: ModelSubscriptionUserProfileFilterInput, owner: String): UserProfile @aws_subscribe(mutations: ["deleteUserProfile"]) @aws_iam @aws_cognito_user_pools
+  onCreateDailyLog(filter: ModelSubscriptionDailyLogFilterInput, owner: String): DailyLog @aws_subscribe(mutations: ["createDailyLog"]) @aws_iam @aws_cognito_user_pools
+  onUpdateDailyLog(filter: ModelSubscriptionDailyLogFilterInput, owner: String): DailyLog @aws_subscribe(mutations: ["updateDailyLog"]) @aws_iam @aws_cognito_user_pools
+  onDeleteDailyLog(filter: ModelSubscriptionDailyLogFilterInput, owner: String): DailyLog @aws_subscribe(mutations: ["deleteDailyLog"]) @aws_iam @aws_cognito_user_pools
+  onCreateWeightEntry(filter: ModelSubscriptionWeightEntryFilterInput, owner: String): WeightEntry @aws_subscribe(mutations: ["createWeightEntry"]) @aws_iam @aws_cognito_user_pools
+  onUpdateWeightEntry(filter: ModelSubscriptionWeightEntryFilterInput, owner: String): WeightEntry @aws_subscribe(mutations: ["updateWeightEntry"]) @aws_iam @aws_cognito_user_pools
+  onDeleteWeightEntry(filter: ModelSubscriptionWeightEntryFilterInput, owner: String): WeightEntry @aws_subscribe(mutations: ["deleteWeightEntry"]) @aws_iam @aws_cognito_user_pools
+}
+
+type ModelDailyLogConnection @aws_iam @aws_cognito_user_pools {
+  items: [DailyLog]!
+  nextToken: String
+}
+
+input ModelDailyLogFilterInput {
+  userId: ModelStringInput
+  date: ModelStringInput
+  meals: ModelStringInput
+  exercises: ModelStringInput
+  alcLog: ModelStringInput
+  waterMl: ModelFloatInput
+  extraSugar: ModelFloatInput
+  coffeeType: ModelStringInput
+  coffeeCount: ModelIntInput
+  fastingStart: ModelStringInput
+  fastingCompleted: ModelBooleanInput
+  id: ModelIDInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelDailyLogFilterInput]
+  or: [ModelDailyLogFilterInput]
+  not: ModelDailyLogFilterInput
+  owner: ModelStringInput
+}
+
+input ModelDailyLogConditionInput {
+  userId: ModelStringInput
+  date: ModelStringInput
+  meals: ModelStringInput
+  exercises: ModelStringInput
+  alcLog: ModelStringInput
+  waterMl: ModelFloatInput
+  extraSugar: ModelFloatInput
+  coffeeType: ModelStringInput
+  coffeeCount: ModelIntInput
+  fastingStart: ModelStringInput
+  fastingCompleted: ModelBooleanInput
+  and: [ModelDailyLogConditionInput]
+  or: [ModelDailyLogConditionInput]
+  not: ModelDailyLogConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  owner: ModelStringInput
+}
+
+input CreateDailyLogInput {
+  userId: String!
+  date: String!
+  meals: String
+  exercises: String
+  alcLog: String
+  waterMl: Float
+  extraSugar: Float
+  coffeeType: String
+  coffeeCount: Int
+  fastingStart: String
+  fastingCompleted: Boolean
+  id: ID
+}
+
+input UpdateDailyLogInput {
+  userId: String
+  date: String
+  meals: String
+  exercises: String
+  alcLog: String
+  waterMl: Float
+  extraSugar: Float
+  coffeeType: String
+  coffeeCount: Int
+  fastingStart: String
+  fastingCompleted: Boolean
+  id: ID!
+}
+
+input DeleteDailyLogInput {
+  id: ID!
+}
+
+input ModelSubscriptionDailyLogFilterInput {
+  userId: ModelSubscriptionStringInput
+  date: ModelSubscriptionStringInput
+  meals: ModelSubscriptionStringInput
+  exercises: ModelSubscriptionStringInput
+  alcLog: ModelSubscriptionStringInput
+  waterMl: ModelSubscriptionFloatInput
+  extraSugar: ModelSubscriptionFloatInput
+  coffeeType: ModelSubscriptionStringInput
+  coffeeCount: ModelSubscriptionIntInput
+  fastingStart: ModelSubscriptionStringInput
+  fastingCompleted: ModelSubscriptionBooleanInput
+  id: ModelSubscriptionIDInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionDailyLogFilterInput]
+  or: [ModelSubscriptionDailyLogFilterInput]
+  owner: ModelStringInput
+}
+
+type ModelWeightEntryConnection @aws_iam @aws_cognito_user_pools {
+  items: [WeightEntry]!
+  nextToken: String
+}
+
+input ModelWeightEntryFilterInput {
+  userId: ModelStringInput
+  date: ModelStringInput
+  kg: ModelFloatInput
+  bmi: ModelFloatInput
+  id: ModelIDInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelWeightEntryFilterInput]
+  or: [ModelWeightEntryFilterInput]
+  not: ModelWeightEntryFilterInput
+  owner: ModelStringInput
+}
+
+input ModelWeightEntryConditionInput {
+  userId: ModelStringInput
+  date: ModelStringInput
+  kg: ModelFloatInput
+  bmi: ModelFloatInput
+  and: [ModelWeightEntryConditionInput]
+  or: [ModelWeightEntryConditionInput]
+  not: ModelWeightEntryConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  owner: ModelStringInput
+}
+
+input CreateWeightEntryInput {
+  userId: String!
+  date: String!
+  kg: Float!
+  bmi: Float
+  id: ID
+}
+
+input UpdateWeightEntryInput {
+  userId: String
+  date: String
+  kg: Float
+  bmi: Float
+  id: ID!
+}
+
+input DeleteWeightEntryInput {
+  id: ID!
+}
+
+input ModelSubscriptionWeightEntryFilterInput {
+  userId: ModelSubscriptionStringInput
+  date: ModelSubscriptionStringInput
+  kg: ModelSubscriptionFloatInput
+  bmi: ModelSubscriptionFloatInput
+  id: ModelSubscriptionIDInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionWeightEntryFilterInput]
+  or: [ModelSubscriptionWeightEntryFilterInput]
+  owner: ModelStringInput
+}

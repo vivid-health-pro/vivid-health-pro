@@ -1,0 +1,2171 @@
+{
+ "Parameters": {
+  "DynamoDBModelTableReadIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of read IOPS the table should support."
+  },
+  "DynamoDBModelTableWriteIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of write IOPS the table should support."
+  },
+  "DynamoDBBillingMode": {
+   "Type": "String",
+   "Default": "PAY_PER_REQUEST",
+   "AllowedValues": [
+    "PAY_PER_REQUEST",
+    "PROVISIONED"
+   ],
+   "Description": "Configure @model types to create DynamoDB tables with PAY_PER_REQUEST or PROVISIONED billing modes."
+  },
+  "DynamoDBEnablePointInTimeRecovery": {
+   "Type": "String",
+   "Default": "false",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Whether to enable Point in Time Recovery on the table."
+  },
+  "DynamoDBEnableServerSideEncryption": {
+   "Type": "String",
+   "Default": "true",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Enable server side encryption powered by KMS."
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef": {
+   "Type": "String"
+  }
+ },
+ "Conditions": {
+  "HasEnvironmentParameter": {
+   "Fn::Not": [
+    {
+     "Fn::Equals": [
+      "NONE",
+      "NONE"
+     ]
+    }
+   ]
+  },
+  "ShouldUsePayPerRequestBilling": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBBillingMode"
+    },
+    "PAY_PER_REQUEST"
+   ]
+  },
+  "ShouldUsePointInTimeRecovery": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnablePointInTimeRecovery"
+    },
+    "true"
+   ]
+  },
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-3"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-4"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-2"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "us-west-2"
+     ]
+    }
+   ]
+  }
+ },
+ "Resources": {
+  "WeightEntryTable": {
+   "Type": "Custom::AmplifyDynamoDBTable",
+   "Properties": {
+    "ServiceToken": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceE51ADCA9Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataAmplifyTableMana3E0D8251"
+    },
+    "tableName": {
+     "Fn::Join": [
+      "",
+      [
+       "WeightEntry-",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "attributeDefinitions": [
+     {
+      "attributeName": "id",
+      "attributeType": "S"
+     }
+    ],
+    "keySchema": [
+     {
+      "attributeName": "id",
+      "keyType": "HASH"
+     }
+    ],
+    "provisionedThroughput": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "ReadCapacityUnits": {
+        "Ref": "DynamoDBModelTableReadIOPS"
+       },
+       "WriteCapacityUnits": {
+        "Ref": "DynamoDBModelTableWriteIOPS"
+       }
+      }
+     ]
+    },
+    "sseSpecification": {
+     "sseEnabled": false
+    },
+    "streamSpecification": {
+     "streamViewType": "NEW_AND_OLD_IMAGES"
+    },
+    "deletionProtectionEnabled": false,
+    "allowDestructiveGraphqlSchemaUpdates": true,
+    "replaceTableUponGsiUpdate": true,
+    "pointInTimeRecoverySpecification": {
+     "Fn::If": [
+      "ShouldUsePointInTimeRecovery",
+      {
+       "PointInTimeRecoveryEnabled": true
+      },
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    },
+    "billingMode": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      "PAY_PER_REQUEST",
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryTable/Default/Default"
+   }
+  },
+  "WeightEntryIAMRole37ED015C": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "appsync.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Policies": [
+     {
+      "PolicyDocument": {
+       "Statement": [
+        {
+         "Action": [
+          "dynamodb:BatchGetItem",
+          "dynamodb:BatchWriteItem",
+          "dynamodb:PutItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:GetItem",
+          "dynamodb:Scan",
+          "dynamodb:Query",
+          "dynamodb:UpdateItem",
+          "dynamodb:ConditionCheckItem",
+          "dynamodb:DescribeTable",
+          "dynamodb:GetRecords",
+          "dynamodb:GetShardIterator"
+         ],
+         "Effect": "Allow",
+         "Resource": [
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "WeightEntry-",
+                {
+                 "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          },
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}/*",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "WeightEntry-",
+                {
+                 "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "Version": "2012-10-17"
+      },
+      "PolicyName": "DynamoDBAccess"
+     }
+    ],
+    "RoleName": {
+     "Fn::Join": [
+      "",
+      [
+       "WeightEntryIAMRole890a63-",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "amplifyData"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryIAMRole/Resource"
+   }
+  },
+  "WeightEntryDataSource": {
+   "Type": "AWS::AppSync::DataSource",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DynamoDBConfig": {
+     "AwsRegion": {
+      "Ref": "AWS::Region"
+     },
+     "TableName": {
+      "Fn::Select": [
+       1,
+       {
+        "Fn::Split": [
+         "/",
+         {
+          "Fn::Select": [
+           5,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::GetAtt": [
+               "WeightEntryTable",
+               "TableArn"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "Name": "WeightEntryTable",
+    "ServiceRoleArn": {
+     "Fn::GetAtt": [
+      "WeightEntryIAMRole37ED015C",
+      "Arn"
+     ]
+    },
+    "Type": "AMAZON_DYNAMODB"
+   },
+   "DependsOn": [
+    "WeightEntryIAMRole37ED015C"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryDataSource/Resource"
+   }
+  },
+  "QuerygetWeightEntryauth0FunctionQuerygetWeightEntryauth0FunctionAppSyncFunction9A759C72": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerygetWeightEntryauth0Function/QuerygetWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetWeightEntrypostAuth0FunctionQuerygetWeightEntrypostAuth0FunctionAppSyncFunction720F0CBE": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerygetWeightEntrypostAuth0Function/QuerygetWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryGetWeightEntryDataResolverFnQueryGetWeightEntryDataResolverFnAppSyncFunctionD2E976EC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryGetWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/08f4d557693d96c1a4efba0f9dc91330e4b19772fd5477c156468843e3d9cb5e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4c6a2d29f01c6091bd1d9afe16e5849d456c96f17c3b215938c8067399532719.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QueryGetWeightEntryDataResolverFn/QueryGetWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "GetWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "getWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerygetWeightEntryauth0FunctionQuerygetWeightEntryauth0FunctionAppSyncFunction9A759C72",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetWeightEntrypostAuth0FunctionQuerygetWeightEntrypostAuth0FunctionAppSyncFunction720F0CBE",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryGetWeightEntryDataResolverFnQueryGetWeightEntryDataResolverFnAppSyncFunctionD2E976EC",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"getWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "WeightEntryTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/queryGetWeightEntryResolver"
+   }
+  },
+  "QuerylistWeightEntriesauth0FunctionQuerylistWeightEntriesauth0FunctionAppSyncFunction95FA99F4": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistWeightEntriesauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerylistWeightEntriesauth0Function/QuerylistWeightEntriesauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistWeightEntriespostAuth0FunctionQuerylistWeightEntriespostAuth0FunctionAppSyncFunctionB6185800": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistWeightEntriespostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QuerylistWeightEntriespostAuth0Function/QuerylistWeightEntriespostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryListWeightEntriesDataResolverFnQueryListWeightEntriesDataResolverFnAppSyncFunctionF3739944": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryListWeightEntriesDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9fcbe070ecd3023c5bf5b966fa9584757db9762eef123bad0820bd87591b2174.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cc01911d0269d4080ea57505dc445dfc315ef7ad85d3d9d4ea1357858bff451d.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/QueryListWeightEntriesDataResolverFn/QueryListWeightEntriesDataResolverFn.AppSyncFunction"
+   }
+  },
+  "ListWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "listWeightEntries",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerylistWeightEntriesauth0FunctionQuerylistWeightEntriesauth0FunctionAppSyncFunction95FA99F4",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistWeightEntriespostAuth0FunctionQuerylistWeightEntriespostAuth0FunctionAppSyncFunctionB6185800",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryListWeightEntriesDataResolverFnQueryListWeightEntriesDataResolverFnAppSyncFunctionF3739944",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"listWeightEntries\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "WeightEntryTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/queryListWeightEntriesResolver"
+   }
+  },
+  "MutationcreateWeightEntryinit0FunctionMutationcreateWeightEntryinit0FunctionAppSyncFunction53EDBE60": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateWeightEntryinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a183ddccbd956316c38ef97177b8f088ef0826f62023323f5ae6053d348ccffc.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationcreateWeightEntryinit0Function/MutationcreateWeightEntryinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateWeightEntryauth0FunctionMutationcreateWeightEntryauth0FunctionAppSyncFunction55610EB3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/74a74d68b8c30b7515694134b2ae994a034b25c02b44111609931278495767dd.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationcreateWeightEntryauth0Function/MutationcreateWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateWeightEntrypostAuth0FunctionMutationcreateWeightEntrypostAuth0FunctionAppSyncFunction519FB791": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationcreateWeightEntrypostAuth0Function/MutationcreateWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationCreateWeightEntryDataResolverFnMutationCreateWeightEntryDataResolverFnAppSyncFunctionD5999903": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationCreateWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d149f8934def8b6e8dde46ec849edf47e9171331c3cb831a916544d789823462.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationCreateWeightEntryDataResolverFn/MutationCreateWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "CreateWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "createWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationcreateWeightEntryinit0FunctionMutationcreateWeightEntryinit0FunctionAppSyncFunction53EDBE60",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateWeightEntryauth0FunctionMutationcreateWeightEntryauth0FunctionAppSyncFunction55610EB3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateWeightEntrypostAuth0FunctionMutationcreateWeightEntrypostAuth0FunctionAppSyncFunction519FB791",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationCreateWeightEntryDataResolverFnMutationCreateWeightEntryDataResolverFnAppSyncFunctionD5999903",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"createWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "WeightEntryTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/mutationCreateWeightEntryResolver"
+   }
+  },
+  "MutationupdateWeightEntryinit0FunctionMutationupdateWeightEntryinit0FunctionAppSyncFunction0820845C": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateWeightEntryinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06db846fd14e6fc371f22b12b5545ba8e2dbfeda85d8c8d586c71c282166657b.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationupdateWeightEntryinit0Function/MutationupdateWeightEntryinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateWeightEntryauth0FunctionMutationupdateWeightEntryauth0FunctionAppSyncFunction52104677": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/31f7851353f140d39b7f663971b079c74e215bbf59e0ebb43ccb5fec6696cb07.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationupdateWeightEntryauth0Function/MutationupdateWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateWeightEntrypostAuth0FunctionMutationupdateWeightEntrypostAuth0FunctionAppSyncFunction771337B2": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationupdateWeightEntrypostAuth0Function/MutationupdateWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationUpdateWeightEntryDataResolverFnMutationUpdateWeightEntryDataResolverFnAppSyncFunctionC4087ED8": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationUpdateWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/474bf0776ec2164a13191d1a0a9e057154931e4918fea5086f49850d02a5371b.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationUpdateWeightEntryDataResolverFn/MutationUpdateWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "UpdateWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "updateWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationupdateWeightEntryinit0FunctionMutationupdateWeightEntryinit0FunctionAppSyncFunction0820845C",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateWeightEntryauth0FunctionMutationupdateWeightEntryauth0FunctionAppSyncFunction52104677",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateWeightEntrypostAuth0FunctionMutationupdateWeightEntrypostAuth0FunctionAppSyncFunction771337B2",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationUpdateWeightEntryDataResolverFnMutationUpdateWeightEntryDataResolverFnAppSyncFunctionC4087ED8",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"updateWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "WeightEntryTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/mutationUpdateWeightEntryResolver"
+   }
+  },
+  "MutationdeleteWeightEntryauth0FunctionMutationdeleteWeightEntryauth0FunctionAppSyncFunction289B8F58": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/867fb7d7eb8e4127b6d0136b82c5c3f74a52eb410297086859986f8e7e4b02aa.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationdeleteWeightEntryauth0Function/MutationdeleteWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteWeightEntrypostAuth0FunctionMutationdeleteWeightEntrypostAuth0FunctionAppSyncFunction86A5306D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationdeleteWeightEntrypostAuth0Function/MutationdeleteWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationDeleteWeightEntryDataResolverFnMutationDeleteWeightEntryDataResolverFnAppSyncFunctionD7C66978": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "WeightEntryDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationDeleteWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f7907d1209a2c9953a0c053df402c634e359546d70c7cc5c2e8e21ea734880f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "WeightEntryDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/MutationDeleteWeightEntryDataResolverFn/MutationDeleteWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeleteWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "deleteWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteWeightEntryauth0FunctionMutationdeleteWeightEntryauth0FunctionAppSyncFunction289B8F58",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteWeightEntrypostAuth0FunctionMutationdeleteWeightEntrypostAuth0FunctionAppSyncFunction86A5306D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationDeleteWeightEntryDataResolverFnMutationDeleteWeightEntryDataResolverFnAppSyncFunctionD7C66978",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"deleteWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "WeightEntryTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/mutationDeleteWeightEntryResolver"
+   }
+  },
+  "SubscriptiononCreateWeightEntryauth0FunctionSubscriptiononCreateWeightEntryauth0FunctionAppSyncFunctionABE27B41": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononCreateWeightEntryauth0Function/SubscriptiononCreateWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateWeightEntrypostAuth0FunctionSubscriptiononCreateWeightEntrypostAuth0FunctionAppSyncFunctionD2E8FB3D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononCreateWeightEntrypostAuth0Function/SubscriptiononCreateWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnCreateWeightEntryDataResolverFnSubscriptionOnCreateWeightEntryDataResolverFnAppSyncFunctionBBC6EF03": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnCreateWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptionOnCreateWeightEntryDataResolverFn/SubscriptionOnCreateWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "onCreateWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateWeightEntryauth0FunctionSubscriptiononCreateWeightEntryauth0FunctionAppSyncFunctionABE27B41",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateWeightEntrypostAuth0FunctionSubscriptiononCreateWeightEntrypostAuth0FunctionAppSyncFunctionD2E8FB3D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnCreateWeightEntryDataResolverFnSubscriptionOnCreateWeightEntryDataResolverFnAppSyncFunctionBBC6EF03",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onCreateWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/subscriptionOnCreateWeightEntryResolver"
+   }
+  },
+  "SubscriptiononUpdateWeightEntryauth0FunctionSubscriptiononUpdateWeightEntryauth0FunctionAppSyncFunctionA7139A94": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononUpdateWeightEntryauth0Function/SubscriptiononUpdateWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateWeightEntrypostAuth0FunctionSubscriptiononUpdateWeightEntrypostAuth0FunctionAppSyncFunction4435C5C6": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononUpdateWeightEntrypostAuth0Function/SubscriptiononUpdateWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnUpdateWeightEntryDataResolverFnSubscriptionOnUpdateWeightEntryDataResolverFnAppSyncFunction5E5D5575": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnUpdateWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptionOnUpdateWeightEntryDataResolverFn/SubscriptionOnUpdateWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "onUpdateWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateWeightEntryauth0FunctionSubscriptiononUpdateWeightEntryauth0FunctionAppSyncFunctionA7139A94",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateWeightEntrypostAuth0FunctionSubscriptiononUpdateWeightEntrypostAuth0FunctionAppSyncFunction4435C5C6",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnUpdateWeightEntryDataResolverFnSubscriptionOnUpdateWeightEntryDataResolverFnAppSyncFunction5E5D5575",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onUpdateWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/subscriptionOnUpdateWeightEntryResolver"
+   }
+  },
+  "SubscriptiononDeleteWeightEntryauth0FunctionSubscriptiononDeleteWeightEntryauth0FunctionAppSyncFunction69EB4C38": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteWeightEntryauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononDeleteWeightEntryauth0Function/SubscriptiononDeleteWeightEntryauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteWeightEntrypostAuth0FunctionSubscriptiononDeleteWeightEntrypostAuth0FunctionAppSyncFunction07A4A27F": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteWeightEntrypostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptiononDeleteWeightEntrypostAuth0Function/SubscriptiononDeleteWeightEntrypostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnDeleteWeightEntryDataResolverFnSubscriptionOnDeleteWeightEntryDataResolverFnAppSyncFunctionC29975DA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnDeleteWeightEntryDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/SubscriptionOnDeleteWeightEntryDataResolverFn/SubscriptionOnDeleteWeightEntryDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteWeightEntryResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "onDeleteWeightEntry",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteWeightEntryauth0FunctionSubscriptiononDeleteWeightEntryauth0FunctionAppSyncFunction69EB4C38",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteWeightEntrypostAuth0FunctionSubscriptiononDeleteWeightEntrypostAuth0FunctionAppSyncFunction07A4A27F",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnDeleteWeightEntryDataResolverFnSubscriptionOnDeleteWeightEntryDataResolverFnAppSyncFunctionC29975DA",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onDeleteWeightEntry\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/subscriptionOnDeleteWeightEntryResolver"
+   }
+  },
+  "WeightEntryOwnerDataResolverFnWeightEntryOwnerDataResolverFnAppSyncFunction5E8CBD53": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPINONEDS2BFC88D7Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "WeightEntryOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/WeightEntryOwnerDataResolverFn/WeightEntryOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "WeightEntryownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "WeightEntryOwnerDataResolverFnWeightEntryOwnerDataResolverFnAppSyncFunction5E8CBD53",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"WeightEntry\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthauthenticatedUserRole25590D4CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthunauthenticatedUserRole69E909C9Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263authNestedStackauthNestedStackResource61593C41Outputsamplifyvividhealthprooffensemacawsandbox7a67e39263authamplifyAuthIdentityPool1AD617DDRef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "WeightEntry"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/weightEntryOwnerResolver"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WOQWvDMAyFf0vvjlZSdthxTdixG8nuRbGV4MaxgyW3lJD/PpyOjoHg6UMPvVdC+foG+x3euNBmLJztYDkRC5lWUI+q6v0XRpxIKGaogjdWbPCqIQ4palJVYgnTH/b+ueONz4u5e5yC6eAbO0dHZFIWJ1ia4B7u4GhVOM989xqWerPXXY2C7fPlf/pIXucSVfC9HVLErdFvsrtSXBUfzshMwvCeRfEBjkmPJLnAmr2fSeYkaju3goP1w6p8MAQXfrmWe8izu7C1RUxe7ETQPPQHZ8HaRjYBAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-vividhealthpro-offensemacaw-sandbox-7a67e39263/data/amplifyData/WeightEntry/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "GetAttWeightEntryTableStreamArn": {
+   "Description": "Your DynamoDB table StreamArn.",
+   "Value": {
+    "Fn::GetAtt": [
+     "WeightEntryTable",
+     "TableStreamArn"
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "GetAtt:WeightEntryTable:StreamArn"
+      ]
+     ]
+    }
+   }
+  },
+  "GetAttWeightEntryTableName": {
+   "Description": "Your DynamoDB table name.",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "WeightEntry-",
+      {
+       "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+      },
+      "-NONE"
+     ]
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifyvividhealthprooffensemacawsandbox7a67e39263dataamplifyDataGraphQLAPI61CA8D64ApiId"
+       },
+       "GetAtt:WeightEntryTable:Name"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}

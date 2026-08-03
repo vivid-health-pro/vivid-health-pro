@@ -1,0 +1,40 @@
+type UserProfile @model @auth(rules: [{allow: owner, ownerField: "owner"}])
+{
+  userId: String!
+  name: String
+  age: Int
+  heightCm: Float
+  weightKg: Float
+  goalWeight: Float
+  activity: String
+  dietPref: String
+  units: String
+  fastHours: Int
+  burnGoal: Int
+  calorieGoal: Int
+  waterGoalL: Float
+  theme: String
+}
+
+type DailyLog @model @auth(rules: [{allow: owner, ownerField: "owner"}])
+{
+  userId: String!
+  date: String!
+  meals: String
+  exercises: String
+  alcLog: String
+  waterMl: Float
+  extraSugar: Float
+  coffeeType: String
+  coffeeCount: Int
+  fastingStart: String
+  fastingCompleted: Boolean
+}
+
+type WeightEntry @model @auth(rules: [{allow: owner, ownerField: "owner"}])
+{
+  userId: String!
+  date: String!
+  kg: Float!
+  bmi: Float
+}
