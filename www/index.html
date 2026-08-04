@@ -311,6 +311,22 @@ select option{background:var(--s2)}
 .counter-row{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:8px}
 .ctr-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);background:var(--s2);color:var(--text);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif}
 .ctr-val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;min-width:30px;text-align:center}
+/* ═══ PREMIUM / PAYWALL ═══ */
+.pw-hero{text-align:center;padding:6px 0 14px}
+.pw-hero .pw-badge{display:inline-block;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;border-radius:99px;padding:5px 14px;margin-bottom:10px}
+.pw-hero h2{font-size:22px;font-weight:800;letter-spacing:-.3px;margin-bottom:4px}
+.pw-hero p{font-size:13px;color:var(--muted2)}
+.pw-feats{margin:4px 0 14px}
+.pw-feat{display:flex;align-items:flex-start;gap:10px;padding:8px 2px;font-size:13px;color:var(--text)}
+.pw-feat .pw-ic{flex-shrink:0;width:22px;height:22px;border-radius:7px;background:var(--s2);display:flex;align-items:center;justify-content:center;font-size:12px}
+.pw-price-box{background:var(--s2);border:1px solid var(--blue);border-radius:12px;padding:14px;text-align:center;margin-bottom:12px}
+.pw-price{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:800}
+.pw-price-sub{font-size:11px;color:var(--muted2);margin-top:3px}
+.pw-trial{display:inline-block;background:rgba(34,197,94,.14);color:var(--green);font-size:11px;font-weight:700;border-radius:99px;padding:4px 12px;margin-bottom:8px}
+.pw-links{display:flex;justify-content:center;gap:14px;margin-top:12px}
+.pw-links a,.pw-links button{background:none;border:none;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);text-decoration:underline;cursor:pointer;padding:0}
+.pw-fine{font-size:10px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}
+.premium-pill{display:inline-block;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:99px;padding:3px 9px;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -519,6 +535,18 @@ select option{background:var(--s2)}
     <div class="card-title">📉 Weight history</div>
     <div id="pf-weight-log"><div style="color:var(--muted);font-size:13px;text-align:center;padding:10px">No entries yet</div></div>
     <button class="btn btn-ghost btn-sm" style="margin-top:8px" onclick="logCurrentWeight()">+ Log today's weight</button>
+  </div>
+  <!-- PREMIUM CARD -->
+  <div class="card" id="premium-card">
+    <div class="card-title">✨ Vivid Health Pro Premium</div>
+    <div id="premium-status-free">
+      <div style="font-size:13px;color:var(--muted2);margin-bottom:12px;text-align:center">Unlock advanced insights, unlimited history and more.</div>
+      <button class="btn btn-primary" onclick="openPaywall()">✨ Try Premium free for 7 days</button>
+    </div>
+    <div id="premium-status-active" style="display:none">
+      <div style="font-size:13px;color:var(--text);margin-bottom:12px;text-align:center">You're a <span class="premium-pill">Premium</span> member — thank you! 💙</div>
+      <button class="btn btn-ghost btn-sm" onclick="openManageSubscription()">Manage subscription</button>
+    </div>
   </div>
   <!-- ACCOUNT CARD -->
   <div class="card" id="account-card">
@@ -973,6 +1001,35 @@ select option{background:var(--s2)}
 </div><!-- end app -->
 
 <!-- ═══ MODALS ═══ -->
+<!-- Premium paywall modal -->
+<div class="modal-bg" id="paywall-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('paywall-modal')">×</button>
+    <div class="pw-hero">
+      <div class="pw-badge">✨ Premium</div>
+      <h2>Go further with Premium</h2>
+      <p>Everything in Vivid Health Pro, unlocked.</p>
+    </div>
+    <div class="pw-feats">
+      <div class="pw-feat"><div class="pw-ic">📊</div><div><strong>Advanced insights</strong> — deeper trends across fasting, food, training and weight</div></div>
+      <div class="pw-feat"><div class="pw-ic">📆</div><div><strong>Unlimited history</strong> — your full journey, never trimmed</div></div>
+      <div class="pw-feat"><div class="pw-ic">🎯</div><div><strong>Custom goals &amp; routines</strong> — build plans around your life</div></div>
+      <div class="pw-feat"><div class="pw-ic">☁️</div><div><strong>Priority cloud sync</strong> — your data safe across devices</div></div>
+    </div>
+    <div class="pw-price-box">
+      <div class="pw-trial" id="pw-trial-line">7-day free trial</div>
+      <div class="pw-price" id="pw-price-line">—</div>
+      <div class="pw-price-sub" id="pw-period-line">per month · cancel anytime</div>
+    </div>
+    <button class="btn btn-primary" id="pw-cta" onclick="startPurchase()">Start free trial</button>
+    <div class="pw-links">
+      <button onclick="restorePurchases()">Restore purchases</button>
+      <a href="https://vivid-health-pro.github.io/vivid-health-pro/privacy-policy.html" target="_blank">Privacy</a>
+    </div>
+    <div class="pw-fine">Billed through Google Play after the free trial ends. Renews automatically until cancelled in your Play Store subscriptions. New subscribers only for the trial.</div>
+  </div>
+</div>
+
 <!-- Food modal -->
 <div class="modal-bg" id="food-modal">
   <div class="modal">
@@ -2754,6 +2811,7 @@ function skipAuth(){
   } else {
     initApp();
   }
+  initPurchases(null);
   showToast('Running in offline mode — data saves locally only');
 }
 
@@ -2770,6 +2828,7 @@ async function onSignedIn(user){
   }
   ss();
   setTimeout(()=>{syncToCloud();renderAccountCard();},2000);
+  initPurchases(user.userId);
   showToast('☁️ Signed in successfully!');
 }
 
@@ -3003,6 +3062,120 @@ async function syncToCloud(){
     if(data.errors) console.log('Sync warning:', data.errors[0]?.message);
     else console.log('✅ Profile synced to AWS');
   } catch(e){ console.log('Sync error (non-critical):', e.message); }
+}
+
+// ═══════════════════════════════════════
+// PREMIUM SUBSCRIPTIONS (RevenueCat + Google Play Billing)
+// ═══════════════════════════════════════
+const RC_API_KEY = 'goog_MQNbavOMPUoJLxtrDOhBgrVCxOW';   // ← paste your goog_ key from RevenueCat → API keys
+const RC_ENTITLEMENT = 'premium';                   // must match the entitlement identifier in the RevenueCat dashboard
+let rcReady = false;
+let isPremium = false;
+let rcCurrentPackage = null;
+
+function rcPlugin(){
+  return (window.Capacitor && Capacitor.isNativePlatform() && Capacitor.Plugins && Capacitor.Plugins.Purchases) || null;
+}
+
+async function initPurchases(cognitoSub){
+  const Purchases = rcPlugin();
+  if(!Purchases){ updatePremiumUI(); return; }   // browser / web preview — no billing
+  try {
+    const cfg = { apiKey: RC_API_KEY };
+    if(cognitoSub) cfg.appUserID = cognitoSub;   // tie subscription to the account, not the device
+    await Purchases.configure(cfg);
+    rcReady = true;
+    await refreshPremiumStatus();
+  } catch(e){ console.log('RevenueCat init failed:', e.message||e); updatePremiumUI(); }
+}
+
+async function refreshPremiumStatus(){
+  const Purchases = rcPlugin();
+  if(!Purchases || !rcReady){ updatePremiumUI(); return; }
+  try {
+    const { customerInfo } = await Purchases.getCustomerInfo();
+    isPremium = !!(customerInfo && customerInfo.entitlements && customerInfo.entitlements.active && customerInfo.entitlements.active[RC_ENTITLEMENT]);
+  } catch(e){ console.log('Premium check failed:', e.message||e); }
+  document.documentElement.toggleAttribute('data-premium', isPremium);
+  updatePremiumUI();
+}
+
+function updatePremiumUI(){
+  const free = document.getElementById('premium-status-free');
+  const active = document.getElementById('premium-status-active');
+  if(free) free.style.display = isPremium ? 'none' : 'block';
+  if(active) active.style.display = isPremium ? 'block' : 'none';
+}
+
+async function openPaywall(){
+  const Purchases = rcPlugin();
+  if(!Purchases){ showToast('Purchases are available in the mobile app'); return; }
+  document.getElementById('pw-price-line').textContent = '…';
+  document.getElementById('paywall-modal').classList.add('open');
+  try {
+    const { current } = await Purchases.getOfferings();
+    const pkg = current && (current.monthly || (current.availablePackages && current.availablePackages[0]));
+    if(!pkg) throw new Error('No offering available');
+    rcCurrentPackage = pkg;
+    const p = pkg.product;
+    document.getElementById('pw-price-line').textContent = p.priceString || '';
+    const intro = p.introPrice;
+    const trialEl = document.getElementById('pw-trial-line');
+    if(intro && intro.price === 0){
+      trialEl.style.display = 'inline-block';
+      document.getElementById('pw-cta').textContent = 'Start free trial';
+    } else {
+      trialEl.style.display = 'none';
+      document.getElementById('pw-cta').textContent = 'Subscribe';
+    }
+  } catch(e){
+    console.log('Offerings failed:', e.message||e);
+    document.getElementById('pw-price-line').textContent = '$9.99 AUD';
+    showToast('Could not load live pricing — check connection','err');
+  }
+}
+
+async function startPurchase(){
+  const Purchases = rcPlugin();
+  if(!Purchases || !rcCurrentPackage){ showToast('Store not ready — try again in a moment','err'); return; }
+  const btn = document.getElementById('pw-cta');
+  const orig = btn.textContent;
+  btn.textContent = 'Opening Google Play…'; btn.disabled = true;
+  try {
+    const { customerInfo } = await Purchases.purchasePackage({ aPackage: rcCurrentPackage });
+    isPremium = !!(customerInfo && customerInfo.entitlements && customerInfo.entitlements.active && customerInfo.entitlements.active[RC_ENTITLEMENT]);
+    document.documentElement.toggleAttribute('data-premium', isPremium);
+    updatePremiumUI();
+    if(isPremium){ closeModal('paywall-modal'); showToast('✨ Welcome to Premium!'); }
+  } catch(e){
+    if(!(e && (e.userCancelled || e.code === '1'))){ showToast(e.message || 'Purchase failed','err'); }
+  }
+  btn.textContent = orig; btn.disabled = false;
+}
+
+async function restorePurchases(){
+  const Purchases = rcPlugin();
+  if(!Purchases){ showToast('Restore is available in the mobile app'); return; }
+  try {
+    const { customerInfo } = await Purchases.restorePurchases();
+    isPremium = !!(customerInfo && customerInfo.entitlements && customerInfo.entitlements.active && customerInfo.entitlements.active[RC_ENTITLEMENT]);
+    document.documentElement.toggleAttribute('data-premium', isPremium);
+    updatePremiumUI();
+    showToast(isPremium ? '✨ Premium restored!' : 'No previous purchases found');
+    if(isPremium) closeModal('paywall-modal');
+  } catch(e){ showToast(e.message || 'Restore failed','err'); }
+}
+
+function openManageSubscription(){
+  window.open('https://play.google.com/store/account/subscriptions?sku=vividhealth_premium&package=com.vividhealth.pro','_blank');
+}
+
+// Gate helper for future premium-only features:
+//   if(!requirePremium()) return;   ← put at the top of any premium feature function
+function requirePremium(){
+  if(isPremium) return true;
+  openPaywall();
+  return false;
 }
 
 // ═══════════════════════════════════════
